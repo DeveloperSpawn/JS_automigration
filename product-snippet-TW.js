@@ -34,7 +34,7 @@ const configJSON = `{
 	features: "特色",
 	ingredients: "成分",
 	analyticalConstituents: "營養成分及含量",
-	nutritionalAdditives: " ",
+	nutritionalAdditives: ".",
 	feedingGuide: "建議餵飼方式"
  }
 /*
@@ -693,7 +693,7 @@ function showConsoleCopydeckBasicData () {
 		"bvID Local": copydeckData[11],
 		"fpID Local": copydeckData[12],
 		"Brand Local": copydeckData[13],
-		"Pet Type Local": copydeckData[14],
+		"Pet Type Local": copydeckData[15],
 		"Pack Sizes Local": copydeckData[18],
 		"Headline Local": copydeckData[20],
 		"Description Final Local": copydeckData[23],
@@ -711,13 +711,13 @@ function showConsoleCopydeckBasicData () {
 		"Analytical Constituents Local": copydeckData[47],
 		"Nutritional Additives Local": copydeckData[49],
 		"Feeding Guidelines Local": copydeckData[51],
-		"Food Type Local": copydeckData[52],
+		"Food Type Local": copydeckData[53],
 		"Range Local": copydeckData[55],
-		"Category Local": copydeckData[56],
-		"Lifestage Local": copydeckData[58],
-		"Ingredients Local": copydeckData[60],
+		"Category Local": copydeckData[57],
+		"Lifestage Local": copydeckData[59],
+		"Ingredients Local": copydeckData[61],
 		"Conditions Local (PPVD only)": copydeckData[63],
-		"Special Needs  Local": copydeckData[64],
+		"Special Needs  Local": copydeckData[65],
 		"TTT URL Local": copydeckData[66],
 		"SEO Title Local": copydeckData[68],
 		"SEO Description Local": copydeckData[70],
@@ -755,12 +755,6 @@ function showConsoleCopydeckBasicData () {
 
 /*CUSTOM FIELDS FORMATTERS*/
 function internalTitleFormatter() {
-	return externalTitleFormatter() && GTINFormatter()
-		? `${GTINFormatter()} ${externalTitleFormatter()}`
-		: ''
-}
-/*Internal FIELDS FORMATTER*/
-function externalTitleFormatter() {
 	const copydeckTitleInt = copydeckData[5].trim()
 
 	return copydeckTitleInt ? copydeckTitleInt : ''
