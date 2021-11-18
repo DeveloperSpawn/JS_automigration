@@ -31,11 +31,11 @@ const configJSON = `{
  }`
 
  const translations = {
-	features: "Características",
-	ingredients: "Composición",
-	analyticalConstituents: "Componentes analíticos",
-	nutritionalAdditives: "Aditivos nutricionales",
-	feedingGuide: "Guía de alimentación"
+	features: "特色",
+	ingredients: "成分",
+	analyticalConstituents: "營養成分及含量",
+	nutritionalAdditives: " ",
+	feedingGuide: "建議餵飼方式"
  }
 /*
  *Snippet GUI start
