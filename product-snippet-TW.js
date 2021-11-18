@@ -969,9 +969,10 @@ function categoriesFormatter() {
 }
 
 function lifestagesFormatter() {
+	const copydeckPetType = copydeckData[16] //old 16
 	const copydeckLifestageLocal = copydeckData[58] //old 24
 
-	return copydeckLifestageLocal
+	return [[copydeckLifestageLocal, copydeckPetType]]
 }
 
 function ingredientsFormatter() {
