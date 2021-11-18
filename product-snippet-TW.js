@@ -694,7 +694,7 @@ function showConsoleCopydeckBasicData () {
 		"fpID Local": copydeckData[12],
 		"Brand Local": copydeckData[13],
 		"Pet Type Local": copydeckData[15],
-		"Pack Sizes Local": copydeckData[19],
+		"Pack Sizes Local": copydeckData[18],
 		"Headline Local": copydeckData[20],
 		"Description Final Local": copydeckData[23],
 		"Feature 1 Local": copydeckData[25],
