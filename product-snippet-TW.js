@@ -693,7 +693,7 @@ function showConsoleCopydeckBasicData () {
 		"bvID Local": copydeckData[11],
 		"fpID Local": copydeckData[12],
 		"Brand Local": copydeckData[13],
-		"Pet Type Local": copydeckData[14],
+		"Pet Type Local": copydeckData[15],
 		"Pack Sizes Local": copydeckData[18],
 		"Headline Local": copydeckData[20],
 		"Description Final Local": copydeckData[23],
@@ -714,7 +714,7 @@ function showConsoleCopydeckBasicData () {
 		"Food Type Local": copydeckData[53],
 		"Range Local": copydeckData[55],
 		"Category Local": copydeckData[57],
-		"Lifestage Local": copydeckData[59],
+		"Lifestage Local": copydeckData[58],
 		"Ingredients Local": copydeckData[61],
 		"Conditions Local (PPVD only)": copydeckData[63],
 		"Special Needs  Local": copydeckData[65],
@@ -952,12 +952,12 @@ function feedingGuideFormatter() {
 
 /*TAXONOMY FORMATTERS*/
 function petTypeFormatter() {
-	const copydeckPetType = copydeckData[16] //old 16
+	const copydeckPetType = copydeckData[15] //old 16
 	return copydeckPetType
 }
 
 function brandFormatter() {
-	const copydeckBrand = copydeckData[14] //old 14
+	const copydeckBrand = copydeckData[13] //old 14
 	return [copydeckBrand]
 }
 
@@ -969,8 +969,7 @@ function categoriesFormatter() {
 }
 
 function lifestagesFormatter() {
-	const copydeckPetType = copydeckData[16] //old 16
-	const copydeckLifestageLocal = copydeckData[59] //old 24
+	const copydeckLifestageLocal = copydeckData[58] //old 24
 
 	return [[copydeckLifestageLocal, copydeckPetType]]
 }
