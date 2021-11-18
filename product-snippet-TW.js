@@ -830,31 +830,31 @@ function highlightsFormatter() {
  */
 function productSizeFormatter() {
 	const copydeckPackSize = copydeckData[18] //old 32
-	let packSizes = []
+	// let packSizes = []
 
-	if (copydeckPackSize) {
-		packSizes = copydeckPackSize
-			.split(' ')
-			.filter((val) => /\d/.test(val))
-			.map((val) => {
-				if (val.includes('x')) {
-					return `${val.replace(/[^x0-9\s]/gi, '')}g`
-				// } else if (val.includes('kg')) {
-				} else if (/公斤/i.test(val)) {
-					let parsedVal = val.replace(/[^0-9\,]/gi, '')
-					return `${parsedVal}公斤`
-				} else {
-					let parsedVal = parseInt(val.replace(/[^0-9]/gi, ''))
-					return parsedVal > 1000 ? `${parsedVal / 1000}公斤` : `${parsedVal}公克`
-				}
-			})
-			//be in copydeck order
+	// if (copydeckPackSize) {
+	// 	packSizes = copydeckPackSize
+	// 		.split(' ')
+	// 		.filter((val) => /\d/.test(val))
+	// 		.map((val) => {
+	// 			if (val.includes('x')) {
+	// 				return `${val.replace(/[^x0-9\s]/gi, '')}g`
+	// 			// } else if (val.includes('kg')) {
+	// 			} else if (/kg/i.test(val)) {
+	// 				let parsedVal = val.replace(/[^0-9\,]/gi, '')
+	// 				return `${parsedVal}kg`
+	// 			} else {
+	// 				let parsedVal = parseInt(val.replace(/[^0-9]/gi, ''))
+	// 				return parsedVal > 1000 ? `${parsedVal / 1000}kg` : `${parsedVal}g`
+	// 			}
+	// 		})
+	// 		//be in copydeck order
 
 
-			//.sort((first, second) => first.length - second.length)
-	}
+	// 		//.sort((first, second) => first.length - second.length)
+	// }
 
-	return packSizes
+	return copydeckPackSize
 }
 
 function productOverviewFormatter() {
