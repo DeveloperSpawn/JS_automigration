@@ -694,7 +694,7 @@ function showConsoleCopydeckBasicData () {
 		"fpID Local": copydeckData[12],
 		"Brand Local": copydeckData[13],
 		"Pet Type Local": copydeckData[15],
-		"Pack Sizes Local": copydeckData[17],
+		"Pack Sizes Local": copydeckData[18],
 		"Headline Local": copydeckData[20],
 		"Description Final Local": copydeckData[23],
 		"Feature 1 Local": copydeckData[25],
@@ -840,12 +840,12 @@ function productSizeFormatter() {
 				if (val.includes('x')) {
 					return `${val.replace(/[^x0-9\s]/gi, '')}g`
 				// } else if (val.includes('kg')) {
-				} else if (/kg/i.test(val)) {
+				} else if (/公斤/i.test(val)) {
 					let parsedVal = val.replace(/[^0-9\,]/gi, '')
-					return `${parsedVal}kg`
+					return `${parsedVal}公斤`
 				} else {
 					let parsedVal = parseInt(val.replace(/[^0-9]/gi, ''))
-					return parsedVal > 1000 ? `${parsedVal / 1000}kg` : `${parsedVal}g`
+					return parsedVal > 1000 ? `${parsedVal / 1000}公斤` : `${parsedVal}公克`
 				}
 			})
 			//be in copydeck order
