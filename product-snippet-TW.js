@@ -686,6 +686,7 @@ function showFoundedOrNotFoundedValue(node, values, addedOrNotAddedColor) {
 
 function showConsoleCopydeckBasicData () {
 	copydeckBasicData = {
+		"Product Title Master": copydeckData[5],
 		"Product Title Local": copydeckData[6],
 		"TTT URL Match": copydeckData[8],
 		"GTIN Local": copydeckData[10],
