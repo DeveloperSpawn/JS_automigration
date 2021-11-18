@@ -971,7 +971,7 @@ function categoriesFormatter() {
 function lifestagesFormatter() {
 	const copydeckLifestageLocal = copydeckData[58] //old 24
 
-	return [[copydeckLifestageLocal, copydeckPetType]]
+	return copydeckLifestageLocal
 }
 
 function ingredientsFormatter() {
