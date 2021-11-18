@@ -842,10 +842,10 @@ function productSizeFormatter() {
 				// } else if (val.includes('kg')) {
 				} else if (/kg/i.test(val)) {
 					let parsedVal = val.replace(/[^0-9\,]/gi, '')
-					return `${parsedVal}公斤`
+					return `${parsedVal}kg`
 				} else {
 					let parsedVal = parseInt(val.replace(/[^0-9]/gi, ''))
-					return parsedVal > 1000 ? `${parsedVal / 1000}公斤` : `${parsedVal}公克`
+					return parsedVal > 1000 ? `${parsedVal / 1000}kg` : `${parsedVal}g`
 				}
 			})
 			//be in copydeck order
