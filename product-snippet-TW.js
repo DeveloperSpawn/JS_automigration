@@ -760,10 +760,10 @@ function internalTitleFormatter() {
 		: ''
 }
 /*Internal FIELDS FORMATTER*/
-function internalTitleFormatter() {
-    return externalTitleFormatter()
-        ? externalTitleFormatter()
-        : ''
+function externalTitleFormatter() {
+	const copydeckTitleInt = copydeckData[5].trim()
+
+	return copydeckTitleInt ? copydeckTitleInt : ''
 }
 
 function externalTitleFormatter() {
