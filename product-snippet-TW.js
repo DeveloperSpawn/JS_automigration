@@ -758,6 +758,12 @@ function internalTitleFormatter() {
 		? `${GTINFormatter()} ${externalTitleFormatter()}`
 		: ''
 }
+/*Internal FIELDS FORMATTER*/
+function internalTitleFormatter() {
+    return externalTitleFormatter()
+        ? externalTitleFormatter()
+        : ''
+}
 
 function externalTitleFormatter() {
 	const copydeckTitle = copydeckData[6].trim()
