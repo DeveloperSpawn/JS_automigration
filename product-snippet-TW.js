@@ -828,7 +828,7 @@ function highlightsFormatter() {
 /**
  * TODO sorting
  */
-function productSizeFormatter() {
+ function productSizeFormatter() {
 	const copydeckPackSize = copydeckData[18] //old 32
 	let packSizes = []
 
@@ -842,10 +842,10 @@ function productSizeFormatter() {
 				// } else if (val.includes('kg')) {
 				} else if (/kg/i.test(val)) {
 					let parsedVal = val.replace(/[^0-9\,]/gi, '')
-					return `${parsedVal}kg`
+					return `${parsedVal}公斤`
 				} else {
 					let parsedVal = parseInt(val.replace(/[^0-9]/gi, ''))
-					return parsedVal > 1000 ? `${parsedVal / 1000}kg` : `${parsedVal}g`
+					return parsedVal > 1000 ? `${parsedVal / 1000}公斤` : `${parsedVal}公克`
 				}
 			})
 			//be in copydeck order
@@ -854,7 +854,7 @@ function productSizeFormatter() {
 			//.sort((first, second) => first.length - second.length)
 	}
 
-	return copydeckPackSize
+	return packSizes
 }
 
 function productOverviewFormatter() {
