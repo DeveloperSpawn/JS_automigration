@@ -932,6 +932,7 @@ function ingredientsAndNutritionFormatter() {
 	const copydeckIngredientsNutritionalAdditives = copydeckData[49].trim() //old 60
 		? copydeckData[49].replace(/["♥]/gi, '')
 		: ''
+		
 
 	return [
 		`<p><strong>${translations.ingredients}</strong></p><p>${copydeckIngredients.replace(/\n/g, '<br>')}</p>`,
