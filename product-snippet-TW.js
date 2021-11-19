@@ -830,8 +830,8 @@ function highlightsFormatter() {
  */
  function productSizeFormatter() {
 	const copydeckPackSize = copydeckData[18] //old 32
-	 let packSizes = []
-	 packSizes.push(copydeckPackSize)
+	 let packSizes = copydeckPackSize.split('/')
+	 //packSizes.push(copydeckPackSize)
 
 	// if (copydeckPackSize) {
 	// 	packSizes = copydeckPackSize
