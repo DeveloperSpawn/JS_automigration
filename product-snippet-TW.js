@@ -969,15 +969,15 @@ function categoriesFormatter() {
 }
 
 function lifestagesFormatter() {
-	const copydeckPetType = copydeckData[16] //old 16
+	const copydeckPetType = copydeckData[15] //old 16
 	const copydeckLifestageLocal = copydeckData[58] //old 24
 
 	return [[copydeckLifestageLocal, copydeckPetType]]
 }
 
 function ingredientsFormatter() {
-	const ingredients = copydeckData[61].split(',') //old 26
-	const copydeckPetType = copydeckData[16] //old 16
+	const ingredients = copydeckData[60].split(',') //old 26
+	const copydeckPetType = copydeckData[15] //old 16
 
 	let data = []
 
