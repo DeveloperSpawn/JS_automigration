@@ -830,7 +830,8 @@ function highlightsFormatter() {
  */
  function productSizeFormatter() {
 	const copydeckPackSize = copydeckData[18] //old 32
-	// let packSizes = []
+	 let packSizes = []
+	 packSizes.push(copydeckPackSize)
 
 	// if (copydeckPackSize) {
 	// 	packSizes = copydeckPackSize
@@ -854,7 +855,7 @@ function highlightsFormatter() {
 	// 		//.sort((first, second) => first.length - second.length)
 	// }
 
-	return copydeckPackSize
+	return packSizes
 }
 
 function productOverviewFormatter() {
