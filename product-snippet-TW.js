@@ -711,7 +711,7 @@ function showConsoleCopydeckBasicData () {
 		"Analytical Constituents Local": copydeckData[47],
 		"Nutritional Additives Local": copydeckData[49],
 		"Feeding Guidelines Local": copydeckData[51],
-		"Food Type Local": copydeckData[53],
+		"Food Type Local": copydeckData[52],
 		"Range Local": copydeckData[55],
 		"Category Local": copydeckData[56],
 		"Lifestage Local": copydeckData[58],
@@ -963,7 +963,7 @@ function brandFormatter() {
 
 function categoriesFormatter() {
 	const copydeckPetType = copydeckData[15] //old 16
-	const copydeckFoodTypeLocal = copydeckData[56] //old 21
+	const copydeckFoodTypeLocal = copydeckData[52] //old 21
 
 	return [[copydeckPetType, copydeckFoodTypeLocal]]
 }
