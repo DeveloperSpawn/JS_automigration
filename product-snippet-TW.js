@@ -713,7 +713,7 @@ function showConsoleCopydeckBasicData () {
 		"Feeding Guidelines Local": copydeckData[51],
 		"Food Type Local": copydeckData[53],
 		"Range Local": copydeckData[55],
-		"Category Local": copydeckData[57],
+		"Category Local": copydeckData[56],
 		"Lifestage Local": copydeckData[58],
 		"Ingredients Local": copydeckData[61],
 		"Conditions Local (PPVD only)": copydeckData[63],
@@ -962,8 +962,8 @@ function brandFormatter() {
 }
 
 function categoriesFormatter() {
-	const copydeckPetType = copydeckData[16] //old 16
-	const copydeckFoodTypeLocal = copydeckData[57] //old 21
+	const copydeckPetType = copydeckData[15] //old 16
+	const copydeckFoodTypeLocal = copydeckData[56] //old 21
 
 	return [[copydeckPetType, copydeckFoodTypeLocal]]
 }
