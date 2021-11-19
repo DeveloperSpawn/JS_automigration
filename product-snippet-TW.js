@@ -34,7 +34,7 @@ const configJSON = `{
 	features: "特色",
 	ingredients: "成分",
 	analyticalConstituents: "營養成分及含量",
-	nutritionalAdditives: ".",
+	//nutritionalAdditives: "",
 	feedingGuide: "建議餵飼方式"
  }
 /*
@@ -935,8 +935,8 @@ function ingredientsAndNutritionFormatter() {
 
 	return [
 		`<p><strong>${translations.ingredients}</strong></p><p>${copydeckIngredients.replace(/\n/g, '<br>')}</p>`,
-		`<p><strong>${translations.analyticalConstituents}</strong></p><p>${copydeckNutritionAnalyticalConstituents.replace(/\n/g, '<br>')}</p>
-		 <p><strong>${translations.nutritionalAdditives}</strong></p><p>${copydeckIngredientsNutritionalAdditives.replace(/\n/g, '<br>')}</p>`,
+		`<p><strong>${translations.analyticalConstituents}</strong></p><p>${copydeckNutritionAnalyticalConstituents.replace(/\n/g, '<br>')}</p>`,
+		// <p><strong>${translations.nutritionalAdditives}</strong></p><p>${copydeckIngredientsNutritionalAdditives.replace(/\n/g, '<br>')}</p>
 	]
 }
 
