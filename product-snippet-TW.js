@@ -715,7 +715,7 @@ function showConsoleCopydeckBasicData () {
 		"Range Local": copydeckData[55],
 		"Category Local": copydeckData[56],
 		"Lifestage Local": copydeckData[58],
-		"Ingredients Local": copydeckData[61],
+		"Ingredients Local": copydeckData[60],
 		"Conditions Local (PPVD only)": copydeckData[63],
 		"Special Needs  Local": copydeckData[65],
 		"TTT URL Local": copydeckData[66],
