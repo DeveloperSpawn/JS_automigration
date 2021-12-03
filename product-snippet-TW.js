@@ -31,11 +31,11 @@ const configJSON = `{
  }`
 
  const translations = {
-	features: "特色",
-	ingredients: "成分",
-	analyticalConstituents: "營養成分及含量",
+	features: "Manfaat",
+	ingredients: "Komposisi",
+	analyticalConstituents: "Komposisi Nutrisi",
 	//nutritionalAdditives: "",
-	feedingGuide: "建議餵飼方式"
+	feedingGuide: "Panduan Pemberian Makan"
  }
 /*
  *Snippet GUI start
