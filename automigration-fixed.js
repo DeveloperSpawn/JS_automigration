@@ -4,7 +4,6 @@ const configJSON = `{
 	  {"name":"externalTitle","selector":"getElementById('edit-field-product-label-wrapper')","editor":"editInput"},
 	  {"name":"bazaavoiceProductID","selector":"getElementById('edit-field-product-bv-id-wrapper')","editor":"editInput"},
 	  {"name":"GTIN","selector":"getElementById('edit-field-dsu-sku-wrapper')","editor":"editInput"},
-	  {"name":"buyNowFusepump","selector":"getElementById('edit-field-product-fusepump-wrapper')","editor":"editInput"},
 	  {"name":"newsletter","selector":"getElementById('edit-field-product-newsletter-wrapper')","editor":"editSelect"},
 	  {"name":"headLine","selector":"getElementById('edit-field-product-headline-wrapper')","editor":"editInput"},
 	  {"name":"highlights","selector":"getElementById('edit-field-product-highlight-wrapper')","editor":"editInputsGroup","quantity":4},
@@ -687,43 +686,43 @@ function showFoundedOrNotFoundedValue(node, values, addedOrNotAddedColor) {
 
 function showConsoleCopydeckBasicData() {
 	copydeckBasicData = {
-		"Product Title Local": copydeckData[6],
-		"TTT URL Match": copydeckData[8],
-		"GTIN Local": copydeckData[10],
+		"Product Title Local": copydeckData[3],
+		"TTT URL Match": copydeckData[6],
+		"GTIN Local": copydeckData[8],
 		"bvID Local": copydeckData[11],
 		"fpID Local": copydeckData[12],
-		"Brand Local": copydeckData[14],
-		"Pet Type Local": copydeckData[16],
-		"Pack Sizes Local": copydeckData[18],
-		"Headline Local": copydeckData[20],
-		"Description Final Local": copydeckData[23],
-		"Feature 1 Local": copydeckData[25],
-		"Feature 2 Local": copydeckData[27],
-		"Feature 3 Local": copydeckData[29],
-		"Feature 4 Local": copydeckData[31],
-		"Feature 5 Local": copydeckData[33],
-		"Feature 6 Local": copydeckData[35],
-		"Feature 7 Local": copydeckData[37],
-		"Feature 8 Local": copydeckData[39],
-		"Feature 9 Local": copydeckData[41],
-		"Feature 10 Local": copydeckData[43],
+		"Brand Local": copydeckData[10],
+		"Pet Type Local": copydeckData[12],
+		"Pack Sizes Local": copydeckData[14],
+		"Headline Local": copydeckData[15],
+		"Description Final Local": copydeckData[17],
+		"Feature 1 Local": copydeckData[18],
+		"Feature 2 Local": copydeckData[19],
+		"Feature 3 Local": copydeckData[20],
+		"Feature 4 Local": copydeckData[21],
+		"Feature 5 Local": copydeckData[22],
+		"Feature 6 Local": copydeckData[23],
+		"Feature 7 Local": copydeckData[24],
+		"Feature 8 Local": copydeckData[25],
+		"Feature 9 Local": copydeckData[26],
+		"Feature 10 Local": copydeckData[27],
 		"Composition Local": copydeckData[45],
 		"Analytical Constituents Local": copydeckData[47],
 		"Nutritional Additives Local": copydeckData[49],
 		"Feeding Guidelines Local": copydeckData[51],
-		"Food Type Local": copydeckData[53],
-		"Range Local": copydeckData[55],
-		"Category Local": copydeckData[57],
-		"Lifestage Local": copydeckData[59],
-		"Ingredients Local": copydeckData[61],
-		"Conditions Local (PPVD only)": copydeckData[63],
-		"Special Needs  Local": copydeckData[65],
-		"TTT URL Local": copydeckData[66],
-		"SEO Title Local": copydeckData[68],
-		"SEO Description Local": copydeckData[70],
-		"OG Title Local": copydeckData[72],
-		"OG Description Local": copydeckData[74],
-		"Footer Newsletter Local": copydeckData[76],
+		"Food Type Local": copydeckData[32],
+		"Range Local": copydeckData[34],
+		"Category Local": copydeckData[36],
+		"Lifestage Local": copydeckData[38],
+		"Ingredients Local": copydeckData[40],
+		"Conditions Local (PPVD only)": copydeckData[47],
+		"Special Needs  Local": copydeckData[42],
+		"TTT URL Local": copydeckData[7],
+		"SEO Title Local": copydeckData[48],
+		"SEO Description Local": copydeckData[50],
+		"OG Title Local": copydeckData[52],
+		"OG Description Local": copydeckData[53],
+		"Footer Newsletter Local": copydeckData[54],
 		"Taxonomy terms / Tagging Local": copydeckData[78],
 		"Related 4 Prods Local": copydeckData[80],
 	}
@@ -761,8 +760,8 @@ function internalTitleFormatter() {
 }
 
 function externalTitleFormatter() {
-	const copydeckTitle = copydeckData[6].trim()
-	const copydeckBrand = copydeckData[14].trim()
+	const copydeckTitle = copydeckData[3].trim()
+	const copydeckBrand = copydeckData[11].trim()
 
 	return copydeckTitle ? copydeckTitle : ''
 }
@@ -773,23 +772,23 @@ function bazaavoiceProductIDFormatter() {
 }
 
 function GTINFormatter() {
-	const copydeckGTIN = copydeckData[10]
+	const copydeckGTIN = copydeckData[8]
 		.split(' ')[0]
 		.replace(/[^0-9]/gm, '')
 		.trim()
 	return copydeckGTIN.length > 0 && copydeckGTIN !== '0' ? copydeckGTIN : ''
 }
 
-function buyNowFusepumpFormatter() {
-	const copydeckBuyNowFusepump = copydeckData[12].trim() //.replace(/[^0-9]/gm, '').trim()
-	return copydeckBuyNowFusepump.length > 0 && copydeckBuyNowFusepump !== '0'
-		? copydeckBuyNowFusepump
-		: ''
-}
+// function buyNowFusepumpFormatter() {
+// 	const copydeckBuyNowFusepump = copydeckData[12].trim() //.replace(/[^0-9]/gm, '').trim()
+// 	return copydeckBuyNowFusepump.length > 0 && copydeckBuyNowFusepump !== '0'
+// 		? copydeckBuyNowFusepump
+// 		: ''
+// }
 
 function newsletterFormatter() {
-	const copydecPetType = copydeckData[16] //old 16
-	const copydecNewsletter = copydeckData[76]
+	const copydecPetType = copydeckData[12] //old 16
+	const copydecNewsletter = copydeckData[54]
 
 	return copydecPetType && copydecNewsletter
 		? [copydecPetType, copydecNewsletter]
@@ -797,18 +796,18 @@ function newsletterFormatter() {
 }
 
 function headLineFormatter() {
-	const prodCategoryLocal = copydeckData[20] //old 22
-
+	const prodCategoryLocal = copydeckData[15] //old 22
+	
 	return prodCategoryLocal ? prodCategoryLocal : ''
 }
 
 function highlightsFormatter() {
-	const firstHighlightIndex = 25 // old 36
-	const lastHighlightIndex = 43 // old 54
+	const firstHighlightIndex = 18 // old 36
+	const lastHighlightIndex = 27 // old 54
 
 	let highlights = []
 
-	for (let i = firstHighlightIndex; i <= lastHighlightIndex; i += 2) {
+	for (let i = firstHighlightIndex; i <= lastHighlightIndex; i += 1) {
 		const highlight = copydeckData[i]
 			.split(/([*][A-Za-z])/gm)[0]
 			.replace(/["\n]/gm, '')
@@ -858,15 +857,15 @@ function productSizeFormatter() {
 }
 
 function productOverviewFormatter() {
-	const copydeckProdDesc1 = copydeckData[23].trim() //old 34
+	const copydeckProdDesc1 = copydeckData[17].trim() //old 34
 
-	const firstHighlightIndex = 25 //old 36
-	const lastHighlightIndex = 43 //old 54
+	const firstHighlightIndex = 18 //old 36
+	const lastHighlightIndex = 27 //old 54
 
 	let features = [[], []]
 	let descriptions = [[], []]
 
-	for (let i = firstHighlightIndex; i <= lastHighlightIndex; i += 2) {
+	for (let i = firstHighlightIndex; i <= lastHighlightIndex; i += 1) {
 		separateDescription(copydeckData[i], features)
 	}
 
@@ -922,14 +921,14 @@ function productOverviewFormatter() {
 }
 
 function ingredientsAndNutritionFormatter() {
-	const copydeckIngredients = copydeckData[45].trim() //old 56
-		? copydeckData[45].replace(/["♥]/gi, '')
+	const copydeckIngredients = copydeckData[28].trim() //old 56
+		? copydeckData[28].replace(/["♥]/gi, '')
 		: ''
-	const copydeckNutritionAnalyticalConstituents = copydeckData[47].trim()  //old 58
-		? copydeckData[47].replace(/["♥]/gi, '')
+	const copydeckNutritionAnalyticalConstituents = copydeckData[29].trim()  //old 58
+		? copydeckData[29].replace(/["♥]/gi, '')
 		: ''
-	const copydeckIngredientsNutritionalAdditives = copydeckData[49].trim() //old 60
-		? copydeckData[49].replace(/["♥]/gi, '')
+	const copydeckIngredientsNutritionalAdditives = copydeckData[30].trim() //old 60
+		? copydeckData[30].replace(/["♥]/gi, '')
 		: ''
 
 	return [
@@ -940,7 +939,7 @@ function ingredientsAndNutritionFormatter() {
 }
 
 function feedingGuideFormatter() {
-	const copydeckFeedingGuide = copydeckData[51] //old 62
+	const copydeckFeedingGuide = copydeckData[31] //old 62
 
 	return [
 		`<p><strong>${translations.feedingGuide}</strong></p><p>${copydeckFeedingGuide
@@ -952,32 +951,32 @@ function feedingGuideFormatter() {
 
 /*TAXONOMY FORMATTERS*/
 function petTypeFormatter() {
-	const copydeckPetType = copydeckData[16] //old 16
+	const copydeckPetType = copydeckData[12] //old 16
 	return copydeckPetType
 }
 
 function brandFormatter() {
-	const copydeckBrand = copydeckData[14] //old 14
+	const copydeckBrand = copydeckData[10] //old 14
 	return [copydeckBrand]
 }
 
 function categoriesFormatter() {
-	const copydeckPetType = copydeckData[16] //old 16
-	const copydeckFoodTypeLocal = copydeckData[57] //old 21
+	const copydeckPetType = copydeckData[12] //old 16
+	const copydeckFoodTypeLocal = copydeckData[32] //old 21
 
 	return [[copydeckPetType, copydeckFoodTypeLocal]]
 }
 
 function lifestagesFormatter() {
-	const copydeckPetType = copydeckData[16] //old 16
-	const copydeckLifestageLocal = copydeckData[59] //old 24
+	const copydeckPetType = copydeckData[12] //old 16
+	const copydeckLifestageLocal = copydeckData[38] //old 24
 
 	return [[copydeckLifestageLocal, copydeckPetType]]
 }
 
 function ingredientsFormatter() {
-	const ingredients = copydeckData[61].split(',') //old 26
-	const copydeckPetType = copydeckData[16] //old 16
+	const ingredients = copydeckData[41].split(',') //old 26
+	const copydeckPetType = copydeckData[12] //old 16
 
 	let data = []
 
@@ -991,8 +990,8 @@ function ingredientsFormatter() {
 }
 
 function conditionsFormatter() {
-	const conditions = copydeckData[63].trim() //old 28
-	const copydeckPetType = copydeckData[16] //old 16
+	const conditions = copydeckData[44].trim() //old 28
+	const copydeckPetType = copydeckData[12] //old 16
 
 	return conditions.trim().length > 5 && copydeckPetType.trim()
 		? [[conditions, copydeckPetType]]
@@ -1000,8 +999,8 @@ function conditionsFormatter() {
 }
 
 function specialNeedsFormatter() {
-	const specialNeeds = copydeckData[65].trim() //old 30
-	const copydeckPetType = copydeckData[16] //old 16
+	const specialNeeds = copydeckData[42].trim() //old 30
+	const copydeckPetType = copydeckData[12] //old 16
 
 	return specialNeeds.trim().length > 5 && copydeckPetType.trim()
 		? [[specialNeeds, copydeckPetType]]
@@ -1009,8 +1008,8 @@ function specialNeedsFormatter() {
 }
 
 function rangesFormatter() {
-	const copydeckRange = copydeckData[55].trim() //old 20
-	const copydeckBrand = copydeckData[14] //old 14
+	const copydeckRange = copydeckData[35].trim() //old 20
+	const copydeckBrand = copydeckData[10] //old 14
 
 	return copydeckRange.trim() && copydeckBrand.trim()
 		? [[copydeckRange, copydeckBrand]]
