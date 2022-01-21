@@ -30,11 +30,11 @@ const configJSON = `{
  }`
 
 const translations = {
-	features: "Características",
-	ingredients: "Composición",
-	analyticalConstituents: "Componentes analíticos",
-	nutritionalAdditives: "Aditivos nutricionales",
-	feedingGuide: "Guía de alimentación"
+	features: "Features",
+	ingredients: "Ingridients",
+	analyticalConstituents: "Analytical Constituents",
+	nutritionalAdditives: "Nutritional Additives",
+	feedingGuide: "Feeding Guide"
 }
 /*
  *Snippet GUI start
@@ -1035,7 +1035,7 @@ function openGraphDescriptionFormatter() {
 	return seoOGDescription ? seoOGDescription : ''
 }
 function urlAliasFormatter() {
-	const urlAlias = copydeckData[8]
+	const urlAlias = copydeckData[6]
 	return urlAlias ? urlAlias : ''
 }
 
